@@ -63,7 +63,6 @@ async function run() {
         })
 
 
-
         // GET User BOOKING
         app.get("/myEvents/:email", async (req, res) => {
             const email = req.params.email
@@ -74,7 +73,6 @@ async function run() {
 
 
         // GET ALL USER BOOKING
-
         app.get("/allEvents", async (req, res) => {
             const result = await orderCollection.find({}).toArray();
             res.send(result);
